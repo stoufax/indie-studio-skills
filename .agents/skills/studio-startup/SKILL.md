@@ -2,7 +2,7 @@
 name: studio-startup
 description: Start or configure the game studio in a repository - inspect the real project, fill verified facts in studio/PROJECT.md, run parallel audience discovery and feasibility inspection, and stop with a concrete prototype plan. Use when the user says to start the studio, set up a new game project, or when PROJECT.md is still marked UNCONFIGURED.
 metadata:
-  pack: codex-game-studio
+  pack: studio-crew
   version: "1.0"
 ---
 

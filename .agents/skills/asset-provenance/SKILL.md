@@ -2,7 +2,7 @@
 name: asset-provenance
 description: Create, import, or specify game art and audio assets with recorded provenance, license status, dimensions, and import settings in the studio asset register, and verify them in the engine where possible. Use when adding sprites, textures, animations, UI art, shaders, effects, or sounds, generating assets with a tool, or auditing asset rights.
 metadata:
-  pack: codex-game-studio
+  pack: studio-crew
   version: "1.0"
 ---
 

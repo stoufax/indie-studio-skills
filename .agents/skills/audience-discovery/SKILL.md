@@ -2,7 +2,7 @@
 name: audience-discovery
 description: Research up to three reachable niche audiences for a game - unmet player needs, current alternatives, reachable communities, willingness-to-pay evidence or its absence, differentiation, and counterevidence - and record every claim in the evidence ledger with source and confidence. Use at game discovery, before committing to a concept, or when the user asks who the game is for, what niche to target, or to research competitors and player reviews.
 metadata:
-  pack: codex-game-studio
+  pack: studio-crew
   version: "1.0"
 ---
 

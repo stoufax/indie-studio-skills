@@ -2,7 +2,7 @@
 name: milestone-build
 description: Implement an approved playable game milestone end to end - define acceptance criteria and file ownership, delegate gameplay, systems, and art work, integrate, have qa_reviewer verify, fix and re-verify, then report what needs human playtesting. Use when the user approves a prototype plan or says build the next milestone.
 metadata:
-  pack: codex-game-studio
+  pack: studio-crew
   version: "1.0"
 ---
 

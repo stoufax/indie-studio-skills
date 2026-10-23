@@ -2,7 +2,7 @@
 name: task-contract
 description: Write a task contract before delegating work to a studio specialist (game_designer, gameplay_engineer, systems_engineer, technical_artist, marketing_research, qa_reviewer), and check the specialist's handoff against it. Use whenever the lead assigns substantial work to a subagent, splits work across parallel agents, or integrates a returned report.
 metadata:
-  pack: codex-game-studio
+  pack: studio-crew
   version: "1.0"
 ---
 

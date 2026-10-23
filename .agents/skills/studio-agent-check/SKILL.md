@@ -2,7 +2,7 @@
 name: studio-agent-check
 description: Read-only check that the game studio's named custom agents actually load in this Codex client and report the tools they can reach. Use right after installing or merging the studio pack, after updating the Codex client, or when a named role such as marketing_research fails to spawn.
 metadata:
-  pack: codex-game-studio
+  pack: studio-crew
   version: "1.0"
 ---
 

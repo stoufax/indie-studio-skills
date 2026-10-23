@@ -2,7 +2,7 @@
 name: audience-experiment
 description: Design an audience validation experiment for a game before it runs - hypothesis, recruitment, variants, primary metric with denominator, sample and time limits, and decision rule - then record results honestly afterwards. Use when testing a game concept, store page, trailer, prototype, or price with players, or when the user asks how to validate demand.
 metadata:
-  pack: codex-game-studio
+  pack: studio-crew
   version: "1.0"
 ---
 

@@ -2,7 +2,7 @@
 name: build-verification
 description: Independently verify an integrated game build against its acceptance criteria - run available checks, reproduce defects, exercise restart, pause, repeated sessions, and save/load, and measure performance with full test context. Use for QA of a milestone or fix, when reproducing a reported bug, or when profiling frame time and memory before optimization.
 metadata:
-  pack: codex-game-studio
+  pack: studio-crew
   version: "1.0"
 ---
 

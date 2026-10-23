@@ -2,7 +2,7 @@
 name: core-loop-spec
 description: Turn an audience hypothesis into the smallest playable, testable game design spec - controls, rules, state transitions, feedback, failure and recovery, progression, tunable values, edge cases, a cut list, and acceptance criteria. Use when designing a core loop, mechanic, level, or progression change, or when a pivot needs a prototype that distinguishes competing explanations.
 metadata:
-  pack: codex-game-studio
+  pack: studio-crew
   version: "1.0"
 ---
 

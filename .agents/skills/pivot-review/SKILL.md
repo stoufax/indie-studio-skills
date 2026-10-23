@@ -2,7 +2,7 @@
 name: pivot-review
 description: Run a milestone review that ends in a continue, refine, pivot, or stop recommendation, combining independent assessments from marketing_research, game_designer, and qa_reviewer into a pivot brief with counterevidence, cost, and the next discriminating test. Use at milestone reviews, after an audience experiment completes, or when the user asks whether to pivot or change the game's direction.
 metadata:
-  pack: codex-game-studio
+  pack: studio-crew
   version: "1.0"
 ---
 

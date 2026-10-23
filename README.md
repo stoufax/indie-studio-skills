@@ -1,10 +1,10 @@
-# Codex Game Studio
+# Studio Crew
 
 Seven roles for a small game studio: one lead in the main Codex conversation and six specialist subagents. Marketing and player research participates from discovery through pivot decisions. This is a reusable project configuration, not a running game, hosted service, or installed engine.
 
 ## Install into your game repository
 
-1. Extract the ZIP outside your game repository and open the extracted `codex-game-studio` folder. Show hidden files to see `.codex` and `.agents` (Cmd+Shift+. in macOS Finder).
+1. Extract the ZIP outside your game repository and open the extracted `studio-crew` folder. Show hidden files to see `.codex` and `.agents` (Cmd+Shift+. in macOS Finder).
 2. Copy `AGENTS.md`, `.codex`, `.agents`, and `studio` into the root of the game repository. For an empty repository, these can be copied directly.
 3. For an existing project, merge rather than overwrite: preserve existing AGENTS.md rules, existing config settings, custom agents, skills in `.agents/skills/`, and studio documents. Codex does not merge two skills with the same name; rename one. Add the supplied `[agents]` keys to an existing table rather than creating a duplicate table. Resolve colliding role names explicitly. The README and VALIDATION.md are setup notes and need not be copied.
 4. Start a new local Codex session at the repository root, or open that repository in your Codex client. Complete the normal project trust flow if your client requests it. Do not change permission modes merely to install this pack.

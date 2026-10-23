@@ -2,7 +2,7 @@
 name: save-schema-change
 description: Add or change game save data, settings, or progression data without losing existing player data - explicit schema versioning, migration, missing and corrupt save handling, and round-trip tests. Use when implementing save/load, changing a save format or settings file, or adding progression fields.
 metadata:
-  pack: codex-game-studio
+  pack: studio-crew
   version: "1.0"
 ---
 

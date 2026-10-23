@@ -2,7 +2,7 @@
 name: studio-resume
 description: Resume game studio work in a new session from the repository's durable records - PROJECT.md, BACKLOG.md, DECISIONS.md, evidence ledger, and working tree - then continue the next ready task within existing authorization. Use when the user says resume, continue, pick up where we left off, or opens a new session on a configured studio project.
 metadata:
-  pack: codex-game-studio
+  pack: studio-crew
   version: "1.0"
 ---
 
