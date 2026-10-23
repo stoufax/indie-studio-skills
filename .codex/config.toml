@@ -1,0 +1,5 @@
+# Project-scoped settings. Merge with an existing [agents] table; do not duplicate it.
+# Model and permissions are inherited from the parent Codex session.
+[agents]
+enabled = true
+max_concurrent_threads_per_session = 3
