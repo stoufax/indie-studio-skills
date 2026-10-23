@@ -24,7 +24,7 @@ Five templates exist twice: in `studio/` (canonical project copy) and in a skill
 
 - Re-packaging the ZIP: the packaging check above predates the skills. A new ZIP must include `.agents`.
 - Codex loading the skills and invoking them implicitly or with `$skill-name`.
-- Listing on skills.sh: that needs a public GitHub repository and installs through the CLI; this repository is local only and has no remote.
+- Listing on skills.sh: the skills are published at https://github.com/stoufax/indie-studio-skills (public); skills.sh lists them once installs through the CLI are recorded. `npx skills add stoufax/indie-studio-skills` from GitHub has not been run.
 - Codex runtime loading, named-role spawning, and multi-agent handoffs: no Codex executable is installed in the build environment.
 - Installation into the user's game repository: no target repository was supplied.
 - Engine builds, asset generation, device profiling, and actual audience experiments: no game or engine was selected.
