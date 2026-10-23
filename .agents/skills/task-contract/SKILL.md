@@ -3,7 +3,7 @@ name: task-contract
 description: Write a task contract before delegating work to a studio specialist (game_designer, gameplay_engineer, systems_engineer, technical_artist, marketing_research, qa_reviewer), and check the specialist's handoff against it. Use whenever the lead assigns substantial work to a subagent, splits work across parallel agents, or integrates a returned report.
 metadata:
   pack: studio-crew
-  version: "1.0"
+  version: "1.1"
 ---
 
 # Task contract
@@ -34,6 +34,13 @@ Give reports unique paths under `studio/work/` or `studio/research/`.
 3. Out-of-scope edits the agent needed must arrive as requests, not as changes. Revert nothing yourself without telling the user.
 4. Move proposed shared-document updates into the lead documents yourself.
 
+## Running roles
+
+Role names follow the project's agent definitions, which differ by tool: for example `.claude/agents/*.md` in Claude Code or `.codex/agents/*.toml` in Codex. A tool may spell them with hyphens (`marketing-research`) instead of underscores.
+
+- **With subagents:** run each contract as a delegation to the named role.
+- **Without subagents, or without a definition for that role:** do the task yourself in a separate pass, following the role's skill and the same contract, and label the handoff `single-agent: <role>`. Keep QA as independent as you can by verifying against the acceptance criteria rather than your own implementation notes, and tell the user that review was not independent.
+
 ## Limits
 
-Use at most three open specialist threads; close each when its handoff is accepted. Specialists do not spawn further agents.
+Have at most three specialist tasks in progress at once; end each when its handoff is accepted. Specialists do not delegate further.

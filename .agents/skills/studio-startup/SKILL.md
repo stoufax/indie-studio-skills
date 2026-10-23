@@ -3,7 +3,7 @@ name: studio-startup
 description: Start or configure the game studio in a repository - inspect the real project, fill verified facts in studio/PROJECT.md, run parallel audience discovery and feasibility inspection, and stop with a concrete prototype plan. Use when the user says to start the studio, set up a new game project, or when PROJECT.md is still marked UNCONFIGURED.
 metadata:
   pack: studio-crew
-  version: "1.0"
+  version: "1.1"
 ---
 
 # Studio startup
@@ -12,7 +12,7 @@ The lead (main conversation) turns an unconfigured repository into a planned fir
 
 ## Inputs
 
-- `AGENTS.md`, `studio/PROJECT.md`, `studio/BACKLOG.md`, `studio/DECISIONS.md`.
+- The project instructions file (`CLAUDE.md`, `AGENTS.md`, or equivalent), `studio/PROJECT.md`, `studio/BACKLOG.md`, `studio/DECISIONS.md`.
 - The actual repository: engine files, existing instructions, working-tree changes, available tools.
 
 ## Steps
@@ -30,6 +30,6 @@ The lead (main conversation) turns an unconfigured repository into a planned fir
 
 ## Rules
 
-- Never more than three specialist threads open at once; close finished ones.
+- Never more than three specialist tasks in progress at once; end finished ones.
 - Do not build an unchosen game, install an engine without a real need, or invent engine commands.
 - No outreach, publication, purchases, or spend.
