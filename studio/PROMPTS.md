@@ -1,10 +1,10 @@
 # Studio prompts
 
-Each prompt has a matching skill in `.agents/skills/`. In Codex you can also start one directly, for example `$studio-startup`: 1 `studio-agent-check`, 2 `studio-startup`, 3 `audience-discovery` then `core-loop-spec`, 4 `milestone-build`, 5 `pivot-review`, 6 `studio-resume`.
+Each prompt has a matching skill in the agent's skill folder; agents that support explicit skill invocation can also start the skill by name instead: 1 `studio-agent-check`, 2 `studio-startup`, 3 `audience-discovery` then `core-loop-spec`, 4 `milestone-build`, 5 `pivot-review`, 6 `studio-resume`.
 
-## 1. Confirm agent discovery (no game edits)
+## 1. Confirm subagents work (no game edits)
 
-Act as studio lead. Read AGENTS.md and the custom agent definitions. Delegate a read-only check to marketing_research: explain its research and pivot responsibilities and what tools it can actually access. Wait for its result, close its thread, and report whether the named custom role loaded. Do not edit game files. If custom roles are unavailable, explain the client limitation rather than pretending the check passed.
+Act as studio lead. Read AGENTS.md and the role files in studio/roles/. Start a subagent as marketing_research, pointing it at studio/roles/marketing_research.md, with a read-only task: explain its research and pivot responsibilities and what tools it can actually access. Wait for its result, end the subagent, and report whether it followed the role file. Do not edit game files. If this agent cannot run subagents, say so and use single-agent mode rather than pretending the check passed.
 
 ## 2. Start the studio
 

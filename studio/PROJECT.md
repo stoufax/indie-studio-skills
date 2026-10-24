@@ -34,7 +34,7 @@ The lead fills this from the real repository. Use NOT AVAILABLE when appropriate
 
 | Capability | Available? | Tool / limitation |
 |---|---|---|
-| Subagents | Unverified on target client | Smoke test in studio/PROMPTS.md |
+| Subagents | Unverified | Check with the studio-agent-check skill (prompt 1 in studio/PROMPTS.md) |
 | Public web research | Unverified | TBD |
 | Game engine runtime | Unverified | TBD |
 | Image generation / editing | Unverified | TBD |

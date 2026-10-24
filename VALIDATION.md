@@ -1,20 +1,15 @@
 # Validation record
 
-Date: 2026-10-23
+Date: 2026-10-24
 
 ## Completed
 
-- Parsed all seven TOML files with Python 3.12 `tomllib`.
-- Checked six distinct specialist names and their required fields against the documented standalone-agent format.
-- Confirmed every specialist is named in AGENTS.md and instructed not to spawn further agents.
-- Confirmed the main conversation owns the lead role and the concurrency setting allows three specialist threads.
+- Role definitions: six agent-neutral role files in `studio/roles/`, converted from the earlier tool-specific definitions without changing their instructions except to refer to "the project instructions file" and to forbid further delegation. Checked each has `name` equal to its file name and a `description` of 1-1024 characters.
+- Confirmed every specialist is named in AGENTS.md, which states how the lead starts a role as a subagent, the limit of three specialists in progress, and the single-agent fallback.
+- Skills: checked all twelve `.agents/skills/*/SKILL.md` files against the Agent Skills specification: `name` format, `name` equals directory, `description` 1-1024 characters with no YAML-breaking `: ` sequences, and every linked `assets/` file exists. Frontmatter was checked with a regex parser (PyYAML not installed).
+- Ran `npx skills add . --list` (skills CLI, Node 24.19.0, public npm registry): all twelve skills discovered; the role files are not picked up as skills.
+- Searched the pack for references to a specific coding agent's configuration format; none remain. Claude Code is named only where its different instructions file and skill folder need an install note.
 - Checked required project, workflow, evidence, and template files exist and contain valid UTF-8 text.
-- Reviewed ownership, audience-evidence, pivot, and verification instructions for consistent responsibilities.
-- Packaged all files, including `.codex`, in the ZIP and checked archive integrity and byte-for-byte content equality.
-
-- Skills (added 2026-10-23): checked all twelve `.agents/skills/*/SKILL.md` files against the Agent Skills specification: `name` format and length, `name` equals directory, `description` 1-1024 characters, string-only `metadata`, and every linked `assets/` file exists. Frontmatter was checked with a regex parser (PyYAML not installed) and contains no YAML-breaking `: ` sequences.
-- Re-parsed all seven TOML files after adding skill references to each agent's instructions.
-- Ran `npx skills add <local folder> --list` (skills CLI, Node 24.19.0): all twelve skills discovered. Installed them with `--skill '*' -a codex` into an empty temporary repository: twelve skills landed in `.agents/skills/` with their `assets/` templates.
 
 ## Known maintenance cost
 
@@ -22,15 +17,15 @@ Five templates exist twice: in `studio/` (canonical project copy) and in a skill
 
 ## Not run
 
-- Re-packaging the ZIP: the packaging check above predates the skills. A new ZIP must include `.agents`.
-- Codex loading the skills and invoking them implicitly or with `$skill-name`.
-- Listing on skills.sh: the skills are published at https://github.com/stoufax/indie-studio-skills (public); skills.sh lists them once installs through the CLI are recorded. `npx skills add stoufax/indie-studio-skills` from GitHub has not been run.
-- Codex runtime loading, named-role spawning, and multi-agent handoffs: no Codex executable is installed in the build environment.
+- Re-packaging the ZIP: no ZIP has been built since `.agents` was added and `.codex` was removed.
+- Any coding agent loading the skills and invoking them implicitly or by name.
+- A live subagent following a role file, and multi-agent handoffs, in any agent.
+- `npx skills add stoufax/indie-studio-skills` from GitHub after this change. The listing on https://www.skills.sh/stoufax/indie-studio-skills shows all twelve skills from the previous version.
 - Installation into the user's game repository: no target repository was supplied.
 - Engine builds, asset generation, device profiling, and actual audience experiments: no game or engine was selected.
 
 ## First check on your machine
 
-After merging the files into your repository and starting a new Codex session, use the read-only agent-discovery prompt in studio/PROMPTS.md. It checks whether `marketing_research` actually loads as a custom agent and reports the tools it can access. Then use the startup prompt to configure the project and produce the first concrete plan.
+After merging the files into your repository and starting a new session in your coding agent, use the read-only check in prompt 1 of studio/PROMPTS.md (the `studio-agent-check` skill). It checks whether a subagent can run as `marketing_research` from its role file and reports the tools it can access. Then use the startup prompt to configure the project and produce the first concrete plan.
 
 This is a statically validated starter configuration, not a claim that the studio has already run successfully in your environment.

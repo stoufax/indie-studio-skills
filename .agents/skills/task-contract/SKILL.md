@@ -3,7 +3,7 @@ name: task-contract
 description: Write a task contract before delegating work to a studio specialist (game_designer, gameplay_engineer, systems_engineer, technical_artist, marketing_research, qa_reviewer), and check the specialist's handoff against it. Use whenever the lead assigns substantial work to a subagent, splits work across parallel agents, or integrates a returned report.
 metadata:
   pack: studio-crew
-  version: "1.1"
+  version: "1.2"
 ---
 
 # Task contract
@@ -36,10 +36,10 @@ Give reports unique paths under `studio/work/` or `studio/research/`.
 
 ## Running roles
 
-Role names follow the project's agent definitions, which differ by tool: for example `.claude/agents/*.md` in Claude Code or `.codex/agents/*.toml` in Codex. A tool may spell them with hyphens (`marketing-research`) instead of underscores.
+Each role is defined in `studio/roles/<role>.md`. If a tool registers named subagents from those files, it may spell the names with hyphens (`marketing-research`).
 
-- **With subagents:** run each contract as a delegation to the named role.
-- **Without subagents, or without a definition for that role:** do the task yourself in a separate pass, following the role's skill and the same contract, and label the handoff `single-agent: <role>`. Keep QA as independent as you can by verifying against the acceptance criteria rather than your own implementation notes, and tell the user that review was not independent.
+- **With subagents:** start a subagent for each contract and tell it to read and follow `studio/roles/<role>.md`, the project instructions file, and the contract. If the role file is missing, give it the role's skill and the contract instead.
+- **Without subagents:** do the task yourself in a separate pass, following the role file or the role's skill and the same contract, and label the handoff `single-agent: <role>`. Keep QA as independent as you can by verifying against the acceptance criteria rather than your own implementation notes, and tell the user that review was not independent.
 
 ## Limits
 

@@ -4,13 +4,15 @@
 
 Build a game that a specific audience wants to play. Work in small playable increments; use audience evidence and player behavior to guide scope and pivots.
 
-The main Codex conversation is the lead / producer. Six custom specialists are available: `game_designer`, `gameplay_engineer`, `systems_engineer`, `technical_artist`, `marketing_research`, and `qa_reviewer`. Together these are seven roles. Do not spawn another producer.
+The main conversation of whichever coding agent runs this project is the lead / producer. Six specialist roles are defined in `studio/roles/`: `game_designer`, `gameplay_engineer`, `systems_engineer`, `technical_artist`, `marketing_research`, and `qa_reviewer`. Together these are seven roles. Do not start another producer.
 
-These instructions request delegation of substantial independent work to the appropriate specialists. Use at most three concurrently open subagent threads. Use fewer when tasks depend on one another. Close finished threads before opening new ones. Specialists report to the lead and do not spawn further agents. Handle trivial changes directly.
+These instructions request delegation of substantial independent work to the appropriate specialists. To run a role, start a subagent with your tool's subagent mechanism and tell it: "You are `<role>`. Read and follow `studio/roles/<role>.md` and this instructions file. Your task contract is `<path>`." If your tool can register named subagents, you may register them from the role files, which stay canonical. If the tool cannot run subagents, follow single-agent mode in the `task-contract` skill.
+
+Have at most three specialist subagents in progress at once. Use fewer when tasks depend on one another. End finished ones before starting new ones. Specialists report to the lead and do not delegate further. Handle trivial changes directly.
 
 ## Skills
 
-Step-by-step procedures live as Agent Skills in `.agents/skills/`. Use the matching skill instead of improvising the procedure; these instructions take precedence if they conflict.
+Step-by-step procedures live as Agent Skills in the agent's project skill folder (`.agents/skills/` in this pack; some agents, such as Claude Code, read another folder). Use the matching skill instead of improvising the procedure; these instructions take precedence if they conflict.
 
 - Lead: `studio-agent-check`, `studio-startup`, `studio-resume`, `task-contract`, `milestone-build`, `pivot-review`.
 - `marketing_research`: `audience-discovery`, `audience-experiment`.
